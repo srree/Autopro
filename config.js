@@ -18,9 +18,6 @@ exports.config = {
     
     //    suites: {
 
-    // //   exploreLanguage: '/Users/vishvaprasad/eclipse-workspace/ILB/exploreLanguage.js',
-    // //   //languagedonations: '/Users/vishvaprasad/eclipse-workspace/ILB/languagedonations.js'
-    // //    projectdonations: '/Users/vishvaprasad/eclipse-workspace/ILB/projectdonations.js'
     // },
        //specs: ['ilbLogin.js'],
     

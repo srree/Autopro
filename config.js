@@ -5,8 +5,7 @@ exports.config = {
        capabilities: {
            'browserName' : 'chrome'
        },
-    //specs: ['Users/vishvaprasad/eclipse-workspace/ILBspec.js']
-   //specs: ['ilbLogin.js'],
+
    //    
    //         plugins: [{
    //    package: 'protractor-testability-plugin'

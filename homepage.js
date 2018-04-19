@@ -10,6 +10,7 @@ var Give=element(by.buttonText("GIVE"));
 var cart=element(by.className("cart"));
 var pray=element(by.buttonText("//*[@id=header]/div/nav/ul/li[1]/button[4]"));
 var explorelanguage=element(by.className("ib-btn"));
+
 it('test to check  application launching', function()
 {
 browser.get(url);
@@ -30,40 +31,38 @@ logo.click();
 
 console.log("Logo is clicked");
 browser.waitForAngular();
-});
-it('test the ILB About',function(){
-    About.click();
-    
-    console.log("About button is clickable");
-    browser.waitForAngular();
- });
- it('test the Explore language',function(){
-    Explang.click();
+})     
+it('test the ILB logo',function(){
+        logo.click();
         
-        console.log("Explore language is clickable");
+        console.log("Logo is clicked");
         browser.waitForAngular();
-        });
-        // it('test the cart',function(){
-        //     cart.click();
+        })     
+        it('test the ILB logo',function(){
+                About.click();
                 
-        //         console.log("Cart functionality is clickable");
-        //         browser.waitForAngular();
-        //         });
-
-                it('test the Menu',function(){
-                    Menu.click();
+                console.log("Logo is clicked");
+                browser.waitForAngular();
+                })     
+                it('test the ILB logo',function(){
+                        Menu.click();
                         
-                        console.log("Menu item is clickable");
+                        console.log("Logo is clicked");
                         browser.waitForAngular();
-                        });
-
-                        it('test the Explore language in Home',function(){
-                            explorelanguage.click();
+                        })            
+                        it('test the ILB logo',function(){
+                                explorelanguage.click();
                                 
-                                console.log("Menu item is clickable");
+                                console.log("Logo is clicked");
                                 browser.waitForAngular();
-                                });       
-           
+                                })     
+                                it('test the ILB logo',function(){
+                                        Explang.click();
+                                        
+                                        console.log("Logo is clicked");
+                                        browser.waitForAngular();
+                                        })     
+
         });
                 
       

@@ -1,39 +1,36 @@
-// An example configuration file
+// var HtmlReporter = require('protractor-jasmine2-screenshot-reporter');
+
+// var reporter = new HtmlReporter({
+//   dest: 'protractor-reports',
+//   filename: 'protractor-report.html'
+// });
+
+// An example configuration file.
 exports.config = {
-    // The address of a running selenium server.
-    seleniumAddress: 'http://localhost:4444/wd/hub',
-  
-    // Capabilities to be passed to the webdriver instance.
-   /* capabilities: {
-      browserName: 'chrome'
-    },*/
-    getPageTimeout: 5000000,
-    onPrepare: function() {
-     
-      browser.driver.manage().window().maximize();
+  directConnect: true,
+  // Capabilities to be passed to the webdriver instance.
+  capabilities: 
+  {
+    'browserName': 'chrome',
+    //'phantomjs.binary.path': './node_modules/phantomjs/bin/phantomjs'
   },
-    Capabilities: [{
-      
-       
-      browserName: 'chrome'
-      
-      }],
-      
-    
+  // Framework to use. Jasmine is recommended.
+  framework: 'jasmine2',
+//   onPrepare: function() {
+//     jasmine.getEnv().addReporter(reporter);
+//  },
+  // Spec patterns are relative to the current working directory when
+  // protractor is called.
+  specs: ['C:/Users/sridevi/Protractor/Loginn.js'],
+  // Options to be passed to Jasmine.
 
-      spec:['C:/Users/sridevi/Automation/ILB/sample.js'],
-    // Spec patterns are relative to the configuration file location passed
-    // to protractor (in this example conf.js).
-    // They may include glob patterns.
-   
-
-    
-   spec:['C:/Users/sridevi/Automation/ILB/AboutFromMenu.js'],
-  
-    // Options to be passed to Jasmine-node.
-    jasmineNodeOpts: {
-      showColors: true, // Use colors in the command line report.
-     
-    defaultTimeoutInterval : 50000000
-    }
-  };
+  onPrepare: function() {
+    var jasmineReporters = require('jasmine-reporters');
+    jasmine.getEnv().addReporter(new jasmineReporters.JUnitXmlReporter({
+        consolidateAll: true,
+        savePath: 'testresults',
+        filePrefix: 'xmloutput'
+    }));
+  },
+  allScriptsTimeout: 800000000,
+};

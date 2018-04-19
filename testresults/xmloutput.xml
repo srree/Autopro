@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+ <testsuite name="Login functionality for ILB" timestamp="2018-04-19T17:04:38" hostname="localhost" time="37.724" errors="0" tests="1" skipped="0" failures="0">
+  <testcase classname="Login functionality for ILB" name="login with ILB" time="11.133">
+  </testcase>
+ </testsuite>
+</testsuites>

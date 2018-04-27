@@ -32,7 +32,7 @@ describe('donation' , function() {
             continueGuest.click();
             Firstname.click().clear().sendKeys("srree");
             Lirstname.click().clear().sendKeys("dheve");
-            Email.click().clear().sendKeys("sridevi@olivetech.net");
+            Email.click().clear().sendKeys("xxxx@olivetech.net");
             Address.click().clear().sendKeys("Hyderabad");
             City.click().clear().sendKeys("dgfsdgf");
             State.click().clear().sendKeys("TG");

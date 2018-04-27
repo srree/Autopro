@@ -1,6 +1,5 @@
 describe('Login functionality for ILB',function(){
-    //var browser = require('D:/Priyanka/ILB/Browser/Browser.spec.js');
-    // var until = protractor.ExpectedConditions;
+    
     var url = 'https://ilb-sqa-portal.ci.olivetech.com/home';  
     var menuButton = element(by.buttonText('MENU')); 
     var loginbutton = element(by.xpath('//*[@id="hamburger-menu"]/div/div/a[1]/p'));

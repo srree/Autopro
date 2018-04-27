@@ -4,7 +4,7 @@ describe('angularjs homepage', function() {
     angularHomepage.get();
 
     angularHomepage.setName('Julie');
-console.clear();
+
     expect(angularHomepage.getGreetingText()).toEqual('Hello Julie!');
   });
 });

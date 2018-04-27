@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
- <testsuite name="Login functionality for ILB" timestamp="2018-04-19T18:08:49" hostname="localhost" time="65.265" errors="0" tests="1" skipped="0" failures="1">
-  <testcase classname="Login functionality for ILB" name="login with ILB" time="35.257">
-   <failure type="exception" message="Error: Timeout - Async callback was not invoked within timeout specified by jasmine.DEFAULT_TIMEOUT_INTERVAL."><![CDATA[Error: Timeout - Async callback was not invoked within timeout specified by jasmine.DEFAULT_TIMEOUT_INTERVAL.
-    at Timeout._onTimeout (C:\Users\sridevi\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4281:23)
-    at ontimeout (timers.js:482:11)
-    at tryOnTimeout (timers.js:317:5)
-    at Timer.listOnTimeout (timers.js:277:5)]]>
-   </failure>
-   <failure type="exception" message="Error: Timeout - Async callback was not invoked within timeout specified by jasmine.DEFAULT_TIMEOUT_INTERVAL."><![CDATA[Error: Timeout - Async callback was not invoked within timeout specified by jasmine.DEFAULT_TIMEOUT_INTERVAL.
-    at Timeout._onTimeout (C:\Users\sridevi\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4281:23)
-    at ontimeout (timers.js:482:11)
-    at tryOnTimeout (timers.js:317:5)
-    at Timer.listOnTimeout (timers.js:277:5)]]>
-   </failure>
+ <testsuite name="angularjs homepage" timestamp="2018-04-23T12:01:06" hostname="localhost" time="7.377" errors="0" tests="1" skipped="0" failures="0">
+  <testcase classname="angularjs homepage" name="should greet the named user" time="7.375">
   </testcase>
  </testsuite>
 </testsuites>

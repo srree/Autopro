@@ -27,13 +27,13 @@ describe('Test create an account functionality',function()
         console.log("menu is clicked");
         CreateAccount.click();
         console.log("create an account is clicked");
-        Email.click().clear().sendKeys("sridevi.sycom@olivetech.net");
+        Email.click().clear().sendKeys("sridevi@olivetech.net");
         NextButton.click();
         FirstName.click().sendKeys("srree");
         LastName.click().sendKeys("dheve");
         PassWord.click().sendKeys("123456");
         ConfirmPassword.click().sendKeys("123456");
         NextConfirm.click();
-        browser.sleep(60000);
+        browser.driver.sleep(6000000000);
     });
 });

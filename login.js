@@ -9,14 +9,12 @@ describe('test the login functionality',function()
     var RememberMe=element(by.id("rememberMe-input"));
     var Login=element(by.buttonText("LOGIN"));
     var Back=element(by.buttonText("BACK"));
-
     beforeAll(function(){
         browser.ignoreSynchronization = true;
         browser.get(url);
         browser.waitForAngular(true);
         browser.driver.manage().window().maximize();
-    
-    })
+        })
      it('login using menu',function()
       {
         menu.click();
@@ -25,13 +23,10 @@ describe('test the login functionality',function()
         loginFromMenu.click();
         //browser.wait(until.elementToBeClickable(loginFromMenu,5000,'no element to be clickable'));    
         email.click().clear().sendKeys("sridevi@olivetech.net");
-    
-       console.log("success")
-
+           console.log("success")
               password.click().clear().sendKeys("Satvikakil9");
         Login.click();
         browser.sleep(60000);
         console.log("login checked");
       });
-  
-});
+  });

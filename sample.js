@@ -5,6 +5,7 @@ var until=protractor.ExpectedCondition;
     it('test get the url', function()
 {
 browser.get(url);
+browser.driver.sleep(3000);
 browser.getCurrentUrl().then(function(ur)
 {
     expect(ur).toEqual("https://ilb-sqa-portal.ci.olivetech.com/home");

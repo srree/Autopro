@@ -1,95 +1,59 @@
-<<<<<<< HEAD
 // var HtmlReporter = require('protractor-jasmine2-screenshot-reporter');
-
 // var reporter = new HtmlReporter({
 //   dest: 'protractor-reports',
 //   filename: 'protractor-report.html'
-// });
-=======
+// })
 exports.config = {
-    framework: 'jasmine',
-    seleniumAddress: 'http://localhost:4444/wd/hub',
-       ignoreUncaughtExceptions: true,
-       capabilities: {
-           'browserName' : 'chrome'
-       },
-
-   //    
-   //         plugins: [{
-   //    package: 'protractor-testability-plugin'
-   //    }],
-//   
-   // specs:['C:/Users/sridevi/Protractor/sample.js'],
-    //specs:['C:/Users/sridevi/Protractor/menu.js'],
-    specs:['C:/Users/sridevi/Protractor/homepage.js'],
+    directConnect: true,
+    // Capabilities to be passed to the webdriver instance.
     
-    //    suites: {
-
-    // },
-       //specs: ['ilbLogin.js'],
+    capabilities: 
+    {
+      'browserName': 'chrome',
+      chromeOptions: {
+        args: ["--window-size=800,600" ]
+      }
+   }, 
     
-   
-    // params: {
-    //   login: {
-    //     email: 'oliveqa345@mailinator.com',
-    //     password: '123456'
-    //   },
-    //     donations: {
-    //         monthly: 'yes',
-    //         receiveEmailPrayerUpdates: 'yes'
-    //     }
-    // },
-   //    capabilities: {
-   //    browserName: 'firefox'
-   //  }
-   //    multiCapabilities: [{
-   //    browserName: 'firefox'
-   //  }, {
-   //    browserName: 'chrome'
-   //  }]
-   
-   onPrepare: function(){
-       browser.manage().window().maximize();
-       browser.manage().timeouts().implicitlyWait(900000);
+    // Framework to use. Jasmine is recommended.
+    framework: 'jasmine2',
+    getPageTimeout: 10000,
+  //   onPrepare: function() {
+  //     jasmine.getEnv().addReporter(reporter);
+  //  },
+    // Spec patterns are relative to the current working directory when
+    // protractor is called.
+   // specs: ['C:/Users/sridevi/Protractor/Loginn.js'],
+   suites:
+   {
+    hompage: ['C:/Users/sridevi/Protractor/Page_object/hompage.js'],
+    search: ['C:/Users/sridevi/Protractor/Page_object/search.js'],
    },
->>>>>>> 6f1080efa0480525afcfe88425093a16ce533e94
-
-// An example configuration file.
-exports.config = {
-  directConnect: true,
-  // Capabilities to be passed to the webdriver instance.
-  capabilities: 
-  {
-    'browserName': 'chrome',
-    //'phantomjs.binary.path': './node_modules/phantomjs/bin/phantomjs'
+   // specs: ['C:/Users/sridevi/Protractor/creataccount.js'],
+    //specs: ['C:/Users/sridevi/Protractor/sample.js'],
+    // Options to be passed to Jasmine.
+    // onPrepare: function() {
+    //   var jasmineReporters = require('jasmine-reporters');
+    //   jasmine.getEnv().addReporter(new jasmineReporters.JUnitXmlReporter({
+    //       consolidateAll: true,
+    //       savePath: 'testresults',
+    //       filePrefix: 'xmloutput',
+    //       cleanDestination: true
+    //   }));
+    onPrepare: function () {
+      browser.driver.manage().window().setSize(1200, 800);
+      var Jasmine2HtmlReporter = require('C:/Users/sridevi/node_modules/protractor-jasmine2-html-reporter');
+      var reporter  = new Jasmine2HtmlReporter ({
+          dest:  'C:/Users/sridevi/node_modules/protractor/test-results',
+          filename: 'Login.html'
+      });
+      jasmine.getEnv().addReporter(reporter);
   },
-  // Framework to use. Jasmine is recommended.
-  framework: 'jasmine2',
-//   onPrepare: function() {
-//     jasmine.getEnv().addReporter(reporter);
-//  },
-  // Spec patterns are relative to the current working directory when
-  // protractor is called.
-  specs: ['C:/Users/sridevi/Protractor/Loginn.js'],
-  // Options to be passed to Jasmine.
+      jasmineNodeOpts: {
+        showColors: true,
+        defaultTimeoutInterval:5000000,
+        isVerbose : true,
+        includeStackTrace : true,
 
-<<<<<<< HEAD
-  onPrepare: function() {
-    var jasmineReporters = require('jasmine-reporters');
-    jasmine.getEnv().addReporter(new jasmineReporters.JUnitXmlReporter({
-        consolidateAll: true,
-        savePath: 'testresults',
-        filePrefix: 'xmloutput'
-    }));
-  },
-  allScriptsTimeout: 800000000,
-};
-=======
-       jasmineNodeOpts:{
-           showColors: true,
-           defaultTimeoutInterval:80000000,
-           
-       },
-       
-   }
->>>>>>> 6f1080efa0480525afcfe88425093a16ce533e94
+      }
+    };

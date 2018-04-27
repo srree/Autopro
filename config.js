@@ -24,11 +24,12 @@ exports.config = {
     // Spec patterns are relative to the current working directory when
     // protractor is called.
    // specs: ['C:/Users/sridevi/Protractor/Loginn.js'],
-   suites:
-   {
-    hompage: ['C:/Users/sridevi/Protractor/Page_object/hompage.js'],
-    search: ['C:/Users/sridevi/Protractor/Page_object/search.js'],
-   },
+  //  suites:
+  //  {
+  //   hompage: ['C:/Users/sridevi/Protractor/Page_object/hompage.js'],
+  //   search: ['C:/Users/sridevi/Protractor/Page_object/search.js'],
+  //  },
+   specs: ['C:/Users/sridevi/Protractor/Donation.js'],
    // specs: ['C:/Users/sridevi/Protractor/creataccount.js'],
     //specs: ['C:/Users/sridevi/Protractor/sample.js'],
     // Options to be passed to Jasmine.
